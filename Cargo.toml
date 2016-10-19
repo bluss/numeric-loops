@@ -1,0 +1,8 @@
+[package]
+name = "numeric-loops"
+version = "0.1.0"
+authors = ["bluss"]
+
+[dependencies]
+
+[dev-dependencies]
