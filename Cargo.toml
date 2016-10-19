@@ -4,5 +4,6 @@ version = "0.1.0"
 authors = ["bluss"]
 
 [dependencies]
+num-traits = { version = "0.1.35" }
 
 [dev-dependencies]
