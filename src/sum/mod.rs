@@ -1,3 +1,4 @@
+//! Summation loops
 
 mod unroll;
 #[cfg(feature = "use_nightly")]
@@ -11,6 +12,8 @@ use std::ops::{
 };
 
 /// Compute the sum of the values in `xs`
+///
+/// With `"use_nightly"`, this is special cased for `f32, f64`.
 pub fn sum<A>(xs: &[A]) -> A
     where A: Clone + Add<Output=A> + Zero,
 {
@@ -19,10 +22,14 @@ pub fn sum<A>(xs: &[A]) -> A
 
 /// Compute the dot product.
 ///
-/// `xs` and `ys` must be the same length
+/// `xs` and `ys` should be the same length and there *may* be a panic if they
+/// are not.
+///
+/// With `"use_nightly"`, this is special cased for `f32, f64`.
 pub fn dot<A>(xs: &[A], ys: &[A]) -> A
     where A: Add<Output=A> + Mul<Output=A> + Zero + Copy,
 {
+    debug_assert_eq!(xs.len(), ys.len());
     Dot::dot(xs, ys)
 }
 
