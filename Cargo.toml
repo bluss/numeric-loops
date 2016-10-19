@@ -2,6 +2,11 @@
 name = "numeric-loops"
 version = "0.1.0"
 authors = ["bluss"]
+license = "MIT/Apache-2.0"
+repository = "https://github.com/bluss/numeric-loops"
+documentation = "https://docs.rs/numeric-loops/"
+
+description = "Efficient numerical loops (sum, dot product) with optional nightly-using special cases and optimizations."
 
 [dependencies]
 num-traits = { version = "0.1.35" }
