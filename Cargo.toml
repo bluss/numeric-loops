@@ -1,6 +1,6 @@
 [package]
 name = "numeric-loops"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["bluss"]
 license = "MIT/Apache-2.0"
 repository = "https://github.com/bluss/numeric-loops"
@@ -8,11 +8,16 @@ documentation = "https://docs.rs/numeric-loops/"
 
 description = "Efficient numerical loops (sum, dot product) with optional nightly-using special cases and optimizations."
 
+categories = ["science"]
+
 [dependencies]
 num-traits = { version = "0.1.35" }
 
 [dev-dependencies]
 
 [features]
-
 use_nightly = []
+
+[package.metadata.release]
+no-dev-version = true
+

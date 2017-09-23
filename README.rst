@@ -34,6 +34,10 @@ How to use with cargo::
 Recent Changes
 --------------
 
+- 0.1.1
+
+  - Add crate categories
+
 - 0.1.0
 
   - Initial release.
